@@ -16,7 +16,7 @@ public class WrappedTokenEndpoint extends TokenEndpoint {
 
     @Override
     public ResponseEntity<OAuth2AccessToken> postAccessToken(Principal principal,
-                                                             @RequestParam Map<String, String> parameters) throws HttpRequestMethodNotSupportedException {
+                                                             @RequestParam Map<String, String> parameters) throws HttpRequestMethodNotSupportedException, OAuth2TokenEndpointException {
         try {
             return super.postAccessToken(principal, parameters);
         }
